@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,27 @@
 <style>
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Roboto, sans-serif;
     background: #fff8e7;
     color: #333;
     line-height: 1.7;
   }
   .container {
+    position: relative;
     max-width: 720px;
     margin: 0 auto;
     padding: 48px 24px 80px;
   }
+  .lang { position:absolute; top:16px; right:24px; display:flex; background:#fff; border-radius:999px; padding:4px; box-shadow:0 2px 8px rgba(120,80,20,.12); }
+  .lang button { border:0; background:transparent; padding:6px 14px; border-radius:999px; font-weight:600; font-size:13px; font-family:inherit; cursor:pointer; color:#8a7355; }
+  .lang button.on { background:#f08a1c; color:#fff; }
+  .ko { display: none; }
+  html[lang="ko"] .ko { display: block; }
+  html[lang="ko"] .en { display: none; }
   h1 {
     color: #ff9800;
     font-size: 2rem;
-    margin-bottom: 4px;
+    margin: 24px 0 4px;
   }
   .updated {
     color: #999;
@@ -54,6 +61,13 @@
 </head>
 <body>
 <div class="container">
+  <div class="lang">
+    <button id="b-en" onclick="setLang('en')">English</button>
+    <button id="b-ko" onclick="setLang('ko')">한국어</button>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div class="en">
   <h1>Terms of Service</h1>
   <p class="updated">Last updated: July 19, 2026</p>
 
@@ -110,11 +124,92 @@
 
   <h2>12. Contact Us</h2>
   <p>If you have any questions about these Terms, please contact us at:<br>
-  <a href="mailto:shrewb7@gmail.com">shrewb7@gmail.com</a></p>
+  <a href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a></p>
 
   <footer>
     B7 Studio &middot; <a href="/">Home</a> &middot; <a href="https://sites.google.com/view/quacksurvivors/english">Privacy Policy</a>
   </footer>
+  </div>
+
+  <!-- ===================== 한국어 ===================== -->
+  <div class="ko">
+  <h1>이용약관</h1>
+  <p class="updated">최종 수정일: 2026년 7월 19일</p>
+
+  <p>본 이용약관(이하 "약관")은 B7 Studio(이하 "당사")가 제공하는 모바일 애플리케이션 Quack Survivors(이하 "애플리케이션" 또는 "게임")의 이용에 적용됩니다. 애플리케이션을 다운로드, 설치 또는 이용함으로써 이용자는 본 약관에 동의한 것으로 간주됩니다. 동의하지 않는 경우 애플리케이션을 이용하지 마시기 바랍니다.</p>
+
+  <h2>1. 서비스 소개</h2>
+  <p>Quack Survivors는 Google Play 및 해당되는 경우 기타 앱 배포 플랫폼(이하 "플랫폼")을 통해 다운로드할 수 있는 모바일 게임입니다. 당사는 사전 통지 없이 언제든지 애플리케이션의 기능을 업데이트, 변경 또는 중단할 수 있으며, 애플리케이션 전체의 서비스를 종료할 수도 있습니다.</p>
+  <p>당사는 애플리케이션이 모든 지역에서 적합하거나 이용 가능하다고 보증하지 않습니다.</p>
+
+  <h2>2. 이용 자격 및 계정</h2>
+  <p>애플리케이션은 당사에 별도의 계정을 만들 것을 요구하지 않습니다. Google Play 게임 서비스로 로그인하는 경우, 클라우드 저장 및 기기 간 동기화를 위한 목적으로만 게임 진행 데이터가 이용자의 Google 계정에 연결될 수 있습니다. 당사는 이용자의 Google 계정 인증 정보를 독자적으로 수집하거나 저장하지 않습니다.</p>
+  <p>기기에 로컬로 저장된 데이터 또는 Google Play 게임 등 제3자 서비스를 통해 동기화된 데이터를 포함하여, 게임 진행 상황이나 데이터의 손실에 대해 당사는 책임을 지지 않습니다.</p>
+  <p>애플리케이션은 만 13세 미만(또는 해당 관할 지역의 동등한 최소 연령)의 아동을 대상으로 하지 않습니다. 성년 연령에 미달하는 이용자는 부모 또는 보호자와 함께 본 약관을 검토하시기 바랍니다.</p>
+
+  <h2>3. 인앱 결제 및 가상 화폐</h2>
+  <p>애플리케이션은 특정 게임 콘텐츠 및 기능을 이용하는 데 사용할 수 있는 "Cristal"이라는 가상 화폐를 포함한 인앱 결제를 제공할 수 있습니다.</p>
+  <ul>
+    <li>Cristal은 애플리케이션 외부에서 금전적 가치가 없으며, 교환, 양도, 판매 또는 현금으로 환급될 수 없습니다.</li>
+    <li>Cristal 및 기타 가상 아이템은 애플리케이션 내에서만 사용할 수 있도록 이용자에게 이용이 허락된 것이며, 그 소유권은 항상 B7 Studio에 있습니다.</li>
+    <li>모든 결제는 플랫폼(예: Google Play)을 통해 처리됩니다. 환불이 가능한 경우 해당 플랫폼의 환불 정책이 적용되며, B7 Studio는 환불 결과를 직접 통제하거나 보장하지 않습니다.</li>
+    <li>당사는 언제든지 가상 화폐 또는 인앱 결제 기능을 변경, 중지 또는 종료할 권리를 가집니다.</li>
+  </ul>
+
+  <h2>4. 금지 행위</h2>
+  <p>애플리케이션을 이용할 때 이용자는 다음 행위를 하지 않을 것에 동의합니다.</p>
+  <ul>
+    <li>치트, 악용(exploit), 자동화 소프트웨어(봇), 해킹, 모드 또는 허가되지 않은 제3자 소프트웨어를 사용하여 애플리케이션을 변조하거나 방해하는 행위</li>
+    <li>관련 법령에서 허용하는 경우를 제외하고 애플리케이션을 리버스 엔지니어링, 디컴파일 또는 디스어셈블하는 행위</li>
+    <li>불법적인 목적으로 애플리케이션을 이용하거나, 다른 이용자에게 피해를 주거나 방해하거나 부정적인 영향을 미치는 방식으로 이용하는 행위</li>
+    <li>애플리케이션, 관련 시스템 또는 네트워크의 일부에 무단으로 접근하려는 시도</li>
+  </ul>
+
+  <h2>5. 지식재산권</h2>
+  <p>캐릭터, 아트워크, 로고, 효과음, 음악 및 코드를 포함하되 이에 국한되지 않는 애플리케이션에 포함된 모든 콘텐츠는 B7 Studio 또는 라이선스 제공자의 자산이며 관련 지식재산권법의 보호를 받습니다. 명시적으로 허용된 경우를 제외하고, 이용자는 애플리케이션을 복제, 수정, 배포하거나 이를 기반으로 2차적 저작물을 만들 수 없습니다.</p>
+
+  <h2>6. 광고</h2>
+  <p>애플리케이션은 Google AdMob을 통해 제공되는 광고를 표시합니다. 광고 파트너는 각자의 개인정보 처리방침에 따라 데이터를 수집하고 이용할 수 있습니다. 자세한 내용은 당사의 <a href="https://sites.google.com/view/quacksurvivors/%ED%95%9C%EA%B5%AD%EC%96%B4">개인정보처리방침</a>을 참고해 주세요.</p>
+  <p>관련 법령(EEA, 영국, 스위스 포함)에서 요구하는 경우, 맞춤형 광고가 표시되기 전에 동의를 요청받게 됩니다. 이 동의는 앱 내 "Ad Consent" 설정에서 언제든지 철회할 수 있습니다.</p>
+
+  <h2>7. 보증의 부인</h2>
+  <p>애플리케이션은 명시적이든 묵시적이든 어떠한 종류의 보증도 없이 "있는 그대로" 및 "제공 가능한 상태로" 제공됩니다. 당사는 애플리케이션이 중단 없이, 오류 없이, 또는 유해한 요소 없이 제공된다는 점을 보증하지 않습니다.</p>
+
+  <h2>8. 책임의 제한</h2>
+  <p>관련 법령이 허용하는 최대 범위 내에서, B7 Studio는 데이터 또는 가상 아이템의 손실을 포함하여 애플리케이션 이용과 관련하여 발생하는 간접적, 부수적, 특별 또는 결과적 손해에 대해 책임을 지지 않습니다.</p>
+
+  <h2>9. 이용 정지 및 해지</h2>
+  <p>이용자가 본 약관을 위반하거나 애플리케이션을 오용하는 경우, 또는 그 밖에 합리적인 사유가 있는 경우 당사는 애플리케이션에 대한 이용자의 접근을 정지하거나 종료할 수 있습니다.</p>
+
+  <h2>10. 약관의 변경</h2>
+  <p>당사는 필요에 따라 본 약관을 변경할 수 있습니다. 중요한 변경 사항은 애플리케이션 또는 기타 합리적인 방법으로 안내될 수 있습니다. 변경 사항이 적용된 후에도 애플리케이션을 계속 이용하는 경우 변경된 약관에 동의한 것으로 간주됩니다.</p>
+
+  <h2>11. 준거법</h2>
+  <p>본 약관은 법률 충돌 원칙과 관계없이 캐나다 브리티시컬럼비아주 법률에 따라 규율됩니다. 다만, 강행 규정인 현지 소비자 보호법이 달리 정하는 경우에는 그에 따릅니다.</p>
+
+  <h2>12. 문의</h2>
+  <p>본 약관에 관한 문의 사항이 있으시면 아래로 연락해 주세요.<br>
+  <a href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a></p>
+
+  <footer>
+    B7 Studio &middot; <a href="/">홈</a> &middot; <a href="https://sites.google.com/view/quacksurvivors/%ED%95%9C%EA%B5%AD%EC%96%B4">개인정보처리방침</a>
+  </footer>
+  </div>
 </div>
+<script>
+function setLang(l){
+  document.documentElement.lang = l;
+  document.getElementById('b-en').className = l==='en' ? 'on' : '';
+  document.getElementById('b-ko').className = l==='ko' ? 'on' : '';
+  document.title = l==='ko' ? '이용약관 - Quack Survivors' : 'Terms of Service - Quack Survivors';
+  try { localStorage.setItem('lang', l); } catch(e){}
+}
+(function(){
+  var l = null;
+  try { l = localStorage.getItem('lang'); } catch(e){}
+  if(l !== 'ko' && l !== 'en') l = (navigator.language||'').toLowerCase().indexOf('ko')===0 ? 'ko' : 'en';
+  setLang(l);
+})();
+</script>
 </body>
 </html>
