@@ -7,7 +7,7 @@
 <style>
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", Meiryo, Roboto, sans-serif;
     background: #fff8e7;
     color: #333;
     line-height: 1.7;
@@ -21,9 +21,11 @@
   .lang { position:absolute; top:16px; right:24px; display:flex; background:#fff; border-radius:999px; padding:4px; box-shadow:0 2px 8px rgba(120,80,20,.12); }
   .lang button { border:0; background:transparent; padding:6px 14px; border-radius:999px; font-weight:600; font-size:13px; font-family:inherit; cursor:pointer; color:#8a7355; }
   .lang button.on { background:#f08a1c; color:#fff; }
-  .ko { display: none; }
+  .ko, .ja { display: none; }
   html[lang="ko"] .ko { display: block; }
   html[lang="ko"] .en { display: none; }
+  html[lang="ja"] .ja { display: block; }
+  html[lang="ja"] .en { display: none; }
   h1 {
     color: #ff9800;
     font-size: 2rem;
@@ -64,6 +66,7 @@
   <div class="lang">
     <button id="b-en" onclick="setLang('en')">English</button>
     <button id="b-ko" onclick="setLang('ko')">한국어</button>
+    <button id="b-ja" onclick="setLang('ja')">日本語</button>
   </div>
 
   <!-- ===================== ENGLISH ===================== -->
@@ -225,19 +228,105 @@
     B7 Studio &middot; <a href="/">홈</a> &middot; <a href="/privacy.html">개인정보처리방침</a>
   </footer>
   </div>
+
+  <!-- ===================== 日本語 ===================== -->
+  <div class="ja">
+  <h1>利用規約</h1>
+  <p class="updated">最終更新日：2026年7月19日</p>
+
+  <p>本利用規約（以下「本規約」といいます）は、B7 Studio（以下「当社」といいます）が提供するモバイルアプリケーション「Quack Survivors」（以下「本アプリ」または「本ゲーム」といいます）のご利用に適用されます。本アプリをダウンロード、インストール、または利用することにより、お客様は本規約に拘束されることに同意したものとみなされます。同意されない場合は、本アプリを利用しないでください。</p>
+
+  <h2>1. サービスについて</h2>
+  <p>Quack Survivors は、Google Play、Apple App Store、および該当する場合にはその他のアプリ配信プラットフォーム（以下それぞれ「プラットフォーム」といいます）を通じてダウンロードできるモバイルゲームです。当社は、事前の通知なく、いつでも本アプリの機能を更新、変更、または終了することがあります。また、本アプリ全体のサービスをいつでも終了することがあります。</p>
+  <p>当社は、本アプリがすべての地域において適切であること、または利用可能であることを保証しません。</p>
+
+  <h2>2. 利用資格およびアカウント</h2>
+  <p>本アプリの利用にあたり、当社への個別のアカウント作成は必要ありません。Google Play ゲームサービス（Android）または Apple Game Center（iOS）でサインインした場合、クラウドセーブおよび端末間の同期のためにのみ、ゲームの進行データがお客様の Google アカウントまたは Apple アカウントに紐づけられることがあります。当社は、お客様の Google アカウントまたは Apple アカウントの認証情報を独自に収集または保存することはありません。</p>
+  <p>端末内にローカルで保存されたデータ、または Google Play ゲームや Apple Game Center などの第三者サービスを通じて同期されたデータを含め、ゲームの進行状況やデータの損失について、当社は責任を負いません。</p>
+  <p>本アプリは、13歳未満（またはお客様の居住する法域における同等の最低年齢未満）のお子様を対象としていません。成年に達していないお客様は、保護者の方と一緒に本規約をご確認ください。</p>
+
+  <h2>3. アプリ内課金および仮想通貨</h2>
+  <p>本アプリでは、特定のゲーム内コンテンツや機能を利用するために使用できる「Cristal（クリスタル）」と呼ばれる仮想通貨を含む、アプリ内課金を提供する場合があります。</p>
+  <ul>
+    <li>Cristal は本アプリの外では金銭的価値を持たず、交換、譲渡、販売、または現金への払い戻しはできません。</li>
+    <li>Cristal およびその他の仮想アイテムは、本アプリ内でのみ使用できるようお客様に利用が許諾されるものであり、その所有権は常に B7 Studio に帰属します。</li>
+    <li>すべての購入はプラットフォーム（例：Google Play、Apple App Store）を通じて処理されます。払い戻しが可能な場合は、各プラットフォームの返金ポリシーが適用されます（Apple App Store での購入に関する返金のご請求は Apple が対応します）。B7 Studio は、返金の結果を直接管理または保証するものではありません。</li>
+    <li>当社は、いつでも仮想通貨またはアプリ内課金機能を変更、停止、または終了する権利を有します。</li>
+  </ul>
+
+  <h2>4. 禁止事項</h2>
+  <p>本アプリのご利用にあたり、お客様は以下の行為を行わないことに同意します。</p>
+  <ul>
+    <li>チート、不正利用（エクスプロイト）、自動化ソフトウェア（ボット）、ハッキング、改造（MOD）、または許可されていない第三者のソフトウェアを使用して、本アプリを改変または妨害する行為</li>
+    <li>適用される法令で許可されている場合を除き、本アプリをリバースエンジニアリング、逆コンパイル、または逆アセンブルする行為</li>
+    <li>違法な目的で本アプリを利用する行為、または他のユーザーに損害を与え、妨害し、もしくは悪影響を及ぼす方法で利用する行為</li>
+    <li>本アプリ、関連するシステム、またはネットワークの一部に不正にアクセスしようとする行為</li>
+  </ul>
+
+  <h2>5. 知的財産権</h2>
+  <p>キャラクター、アートワーク、ロゴ、効果音、音楽、コードを含むがこれらに限られない、本アプリに含まれるすべてのコンテンツは、B7 Studio またはそのライセンサーの財産であり、適用される知的財産法によって保護されています。明示的に許可された場合を除き、お客様は本アプリを複製、改変、配布し、または本アプリに基づく二次的著作物を作成することはできません。</p>
+
+  <h2>6. 広告</h2>
+  <p>本アプリでは、Google AdMob を通じて配信される広告を表示します。広告パートナーは、各社のプライバシーポリシーに従ってデータを収集および利用する場合があります。詳細については、当社の<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+  <p>適用される法令（EEA、英国、スイスを含む）で必要とされる場合、パーソナライズ広告が表示される前に同意をお願いする場合があります。この同意は、アプリ内の「Ad Consent」設定からいつでも撤回できます。</p>
+
+  <h2>7. 保証の否認</h2>
+  <p>本アプリは、明示的か黙示的かを問わず、いかなる種類の保証もなく、「現状有姿」かつ「提供可能な状態」で提供されます。当社は、本アプリが中断なく、エラーなく、または有害な要素なく提供されることを保証しません。</p>
+
+  <h2>8. 責任の制限</h2>
+  <p>適用される法令が認める最大限の範囲において、B7 Studio は、データまたは仮想アイテムの損失を含め、本アプリの利用に起因または関連して生じる間接的、付随的、特別、または結果的な損害について、責任を負いません。</p>
+
+  <h2>9. 利用停止および終了</h2>
+  <p>お客様が本規約に違反した場合、本アプリを不正に利用した場合、またはその他合理的な理由がある場合、当社は本アプリへのお客様のアクセスを停止または終了することがあります。</p>
+
+  <h2>10. 本規約の変更</h2>
+  <p>当社は、本規約を随時更新することがあります。重要な変更は、本アプリ内またはその他の合理的な方法でお知らせする場合があります。変更の効力が生じた後も本アプリを継続して利用された場合、変更後の本規約に同意したものとみなされます。</p>
+
+  <h2>11. 準拠法</h2>
+  <p>本規約は、法の抵触に関する原則にかかわらず、カナダ・ブリティッシュコロンビア州の法律に準拠します。ただし、強行規定である現地の消費者保護法が別段の定めをしている場合は、その定めに従います。</p>
+
+  <h2>12. Apple App Store ご利用者向けの追加規約</h2>
+  <p>Apple 製デバイスで Apple App Store を通じて本アプリをダウンロードまたは利用する場合、以下の追加規約が適用されます。本規約の他の部分と矛盾する場合、当該利用についてはこの条項が優先します。</p>
+  <ul>
+    <li><strong>確認事項。</strong>本規約は、お客様と B7 Studio との間でのみ締結されるものであり、Apple Inc.（以下「Apple」といいます）との間で締結されるものではありません。本アプリおよびそのコンテンツについては、Apple ではなく B7 Studio が単独で責任を負います。</li>
+    <li><strong>ライセンスの範囲。</strong>お客様に付与されるライセンスは、Apple Media Services 利用規約に定められた使用規則（Usage Rules）で許可される範囲において、お客様が所有または管理する Apple ブランドの製品上で本アプリを使用するための、限定的かつ譲渡不可のライセンスです。</li>
+    <li><strong>保守およびサポート。</strong>本アプリに関する保守およびサポートサービスの提供については、B7 Studio が単独で責任を負います。Apple は、本アプリに関していかなる保守またはサポートサービスを提供する義務も負いません。</li>
+    <li><strong>保証。</strong>明示的か、法律上黙示的かを問わず、製品の保証については B7 Studio が単独で責任を負います。本アプリが適用される保証に適合しない場合、お客様は Apple に通知することができ、Apple は本アプリの購入代金（ある場合）をお客様に返金します。適用される法令が認める最大限の範囲において、Apple は本アプリに関して、その他のいかなる保証義務も負いません。</li>
+    <li><strong>製品に関する請求。</strong>製造物責任に関する請求、本アプリが法令上または規制上の要件に適合していないという請求、消費者保護法その他これに類する請求を含め、本アプリまたはお客様による本アプリの所持および使用に関して、お客様または第三者が行う一切の請求への対応については、Apple ではなく B7 Studio が責任を負います。</li>
+    <li><strong>知的財産権に関する請求。</strong>本アプリまたはお客様による本アプリの所持および使用が第三者の知的財産権を侵害しているとの主張がなされた場合、その調査、防御、和解および解決については、Apple ではなく B7 Studio が単独で責任を負います。</li>
+    <li><strong>法令遵守。</strong>お客様は、(i) 米国政府による禁輸措置の対象国、または「テロ支援国家」に指定された国に所在していないこと、および (ii) 米国政府の取引禁止または取引制限対象者のリストに掲載されていないことを表明し、保証します。</li>
+    <li><strong>開発者の連絡先。</strong>本アプリに関するご質問、苦情、または請求は、<a href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a> 宛てに B7 Studio までお寄せください。</li>
+    <li><strong>第三者の契約条件。</strong>お客様は、本アプリの使用にあたり、適用される第三者の契約条件（たとえば、お客様のモバイルデータ通信サービス契約）を遵守しなければなりません。</li>
+    <li><strong>第三者受益者。</strong>Apple およびその子会社は、本条項および本規約の第三者受益者です。お客様が本規約に同意した時点で、Apple は第三者受益者として、お客様に対して本規約を執行する権利を有するものとし、当該権利を受諾したものとみなされます。</li>
+  </ul>
+
+  <h2>13. お問い合わせ</h2>
+  <p>本規約に関するご質問は、下記までご連絡ください。<br>
+  <a href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a></p>
+
+  <footer>
+    B7 Studio &middot; <a href="/">ホーム</a> &middot; <a href="/privacy.html">プライバシーポリシー</a>
+  </footer>
+  </div>
+
 </div>
 <script>
 function setLang(l){
   document.documentElement.lang = l;
   document.getElementById('b-en').className = l==='en' ? 'on' : '';
   document.getElementById('b-ko').className = l==='ko' ? 'on' : '';
-  document.title = l==='ko' ? '이용약관 - Quack Survivors' : 'Terms of Service - Quack Survivors';
+  document.getElementById('b-ja').className = l==='ja' ? 'on' : '';
+  var titles = {en: 'Terms of Service - Quack Survivors', ko: '이용약관 - Quack Survivors', ja: '利用規約 - Quack Survivors'};
+  document.title = titles[l] || titles.en;
   try { localStorage.setItem('lang', l); } catch(e){}
 }
 (function(){
   var l = null;
   try { l = localStorage.getItem('lang'); } catch(e){}
-  if(l !== 'ko' && l !== 'en') l = (navigator.language||'').toLowerCase().indexOf('ko')===0 ? 'ko' : 'en';
+  if(l !== 'ko' && l !== 'en' && l !== 'ja') {
+    var nl = (navigator.language||'').toLowerCase();
+    l = nl.indexOf('ko')===0 ? 'ko' : (nl.indexOf('ja')===0 ? 'ja' : 'en');
+  }
   setLang(l);
 })();
 </script>
