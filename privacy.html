@@ -21,11 +21,14 @@
   .lang { position:absolute; top:16px; right:24px; display:flex; background:#fff; border-radius:999px; padding:4px; box-shadow:0 2px 8px rgba(120,80,20,.12); }
   .lang button { border:0; background:transparent; padding:6px 14px; border-radius:999px; font-weight:600; font-size:13px; font-family:inherit; cursor:pointer; color:#8a7355; }
   .lang button.on { background:#f08a1c; color:#fff; }
-  .ko, .ja { display: none; }
+  .ko, .ja, .zh { display: none; }
   html[lang="ko"] .ko { display: block; }
   html[lang="ko"] .en { display: none; }
   html[lang="ja"] .ja { display: block; }
   html[lang="ja"] .en { display: none; }
+  html[lang="zh-Hant"] .zh { display: block; }
+  html[lang="zh-Hant"] .en { display: none; }
+  html[lang="zh-Hant"] body { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", "Segoe UI", Roboto, sans-serif; }
   h1 {
     color: #ff9800;
     font-size: 2rem;
@@ -73,6 +76,7 @@
     <button id="b-en" onclick="setLang('en')">English</button>
     <button id="b-ko" onclick="setLang('ko')">한국어</button>
     <button id="b-ja" onclick="setLang('ja')">日本語</button>
+    <button id="b-zh" onclick="setLang('zh')">繁體中文</button>
   </div>
 
   <!-- ===================== ENGLISH ===================== -->
@@ -334,23 +338,113 @@
   </footer>
   </div>
 
+  <!-- ===================== 繁體中文 ===================== -->
+  <div class="zh">
+  <h1>隱私權政策</h1>
+  <p class="updated">最後更新日期：2026年10月10日</p>
+
+  <p>本隱私權政策說明 B7 Studio（以下稱「我們」或「服務提供者」）在您使用行動應用程式「Quack Survivors」（以下稱「本應用程式」）時，如何蒐集、使用與保護您的資訊。本政策同時適用於本應用程式的 Android 版與 iOS 版。</p>
+
+  <h2>1. 我們蒐集的資訊</h2>
+  <p>我們可能蒐集下列類型的資訊：</p>
+
+  <h3>1) 遊戲服務與雲端存檔</h3>
+  <p>在 Android 上，當您使用 Google Play 遊戲服務登入時，我們可能蒐集您的 Google 帳號 ID。在 iOS 上，當您使用 Apple Game Center 登入時，我們可能存取您的 Game Center 玩家識別碼。這些資訊用於身分驗證、遊戲功能及雲端存檔。</p>
+  <p>您的遊戲進度會儲存在您自己的雲端帳號中：Google Play 遊戲服務（Android）或透過 Apple Game Center 使用的 iCloud（iOS）。我們不營運自己的伺服器。</p>
+
+  <h3>2) 應用程式內購買</h3>
+  <p>當您在應用程式內進行購買時，交易資料在 Android 上由 Google（Google Play）處理，在 iOS 上由 Apple（App Store）處理。我們不會儲存信用卡資料等付款資訊。</p>
+
+  <h3>3) 廣告（AdMob）</h3>
+  <p>我們使用 Google AdMob 來顯示廣告。AdMob 可能蒐集：</p>
+  <ul>
+    <li>廣告 ID</li>
+    <li>裝置資訊</li>
+    <li>使用資料</li>
+  </ul>
+  <p>這些資料用於提供廣告；在您已同意或無須取得同意的情況下，也會用於個人化廣告。</p>
+
+  <h3>4) 分析（Firebase）</h3>
+  <p>我們使用 Google Firebase Analytics 來了解本應用程式的使用情況。Firebase 可能蒐集應用程式使用事件、裝置資訊以及應用程式執行個體識別碼。這些資料用於改善本應用程式，我們不會用它來識別您的個人身分。</p>
+
+  <h3>5) 廣告同意</h3>
+  <p>在法律要求的情況下（例如歐洲經濟區），我們會在顯示個人化廣告之前，先顯示同意通知。您可以隨時在應用程式內的設定中變更您的選擇。</p>
+
+  <h2>2. 我們如何使用資訊</h2>
+  <p>我們將蒐集到的資訊用於：</p>
+  <ul>
+    <li>提供並改善本應用程式</li>
+    <li>支援登入、遊戲及雲端存檔功能</li>
+    <li>處理應用程式內購買</li>
+    <li>分析應用程式的使用情況</li>
+    <li>顯示廣告</li>
+  </ul>
+
+  <h2>3. 資料分享</h2>
+  <p>我們不會出售您的個人資料。</p>
+  <p>不過，為了服務營運、分析、廣告及購買處理，資料可能會與下列對象分享：</p>
+  <ul>
+    <li>Google（Google Play 服務、AdMob、Firebase）</li>
+    <li>Apple（Game Center、iCloud、App Store）</li>
+  </ul>
+
+  <h2>4. 資料保存</h2>
+  <p>我們僅在提供服務所需的期間內保存個人資料。依法律規定，部分資料可能會保存更長的時間。</p>
+
+  <h2>5. 資料安全</h2>
+  <p>我們採取包括 HTTPS（TLS）在內的合理安全措施來保護您的資料。</p>
+
+  <h2>6. 您的權利</h2>
+  <p>您可以請求：</p>
+  <ul>
+    <li>查閱您的資料</li>
+    <li>更正您的資料</li>
+    <li>刪除您的資料</li>
+  </ul>
+
+  <h2>7. 資料刪除請求</h2>
+  <p>本應用程式不營運自己的伺服器。上述大部分資料（Google 帳號 ID、Game Center 識別碼、購買紀錄、廣告識別碼）是由 Google 或 Apple 在 Google Play 服務、Google Play 帳務、Apple Game Center、iCloud、App Store、AdMob 及 Firebase 中直接保存與處理。</p>
+  <p><strong>Android：</strong>如需刪除與您的 Google 帳號或購買紀錄相關的資料，請直接透過您的 Google 帳號設定（<a href="https://myaccount.google.com" rel="noopener">https://myaccount.google.com</a>）或 Google Play 支援服務提出請求。</p>
+  <p><strong>iOS：</strong>透過 Game Center 儲存的遊戲進度會存放在您的 iCloud 帳號中。如需刪除，請前往 iPhone「設定」&gt; [您的姓名] &gt; iCloud &gt; 管理帳號儲存空間，選擇本應用程式並刪除其資料。若是 Apple 帳號或購買資料，請聯絡 Apple 支援服務。</p>
+  <p>如果您對儲存在裝置上的遊戲存檔資料或廣告識別碼有任何疑慮，請來信 <a href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a>，我們會協助您，包括引導您透過裝置設定重設廣告 ID，或透過解除安裝本應用程式來清除本機資料。</p>
+  <p>解除安裝本應用程式會移除儲存在您裝置上的遊戲存檔資料。不過，如果您的進度已透過雲端存檔（Android 的 Google Play 遊戲服務，或 iOS 的 iCloud）備份，這些資料仍會保留在 Google 或 Apple 的伺服器上，當您以相同帳號再次登入時就會還原。若要完全刪除雲端存檔的進度，請依照上述步驟操作。</p>
+
+  <h2>8. 兒童隱私</h2>
+  <p>本應用程式並非以未滿 13 歲的兒童為對象。我們不會在知情的情況下蒐集兒童的個人資料。</p>
+
+  <h2>9. 本政策的變更</h2>
+  <p>我們可能會不定期更新本隱私權政策。變更內容將公布於本頁面。</p>
+
+  <h2>10. 聯絡我們</h2>
+  <p>如有任何問題，請透過以下方式聯絡我們：<br>
+  電子郵件：<a href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a></p>
+
+  <footer>
+    B7 Studio &middot; <a href="/">首頁</a> &middot; <a href="/terms.html">服務條款</a>
+  </footer>
+  </div>
+
 </div>
 <script>
 function setLang(l){
-  document.documentElement.lang = l;
+  document.documentElement.lang = l==='zh' ? 'zh-Hant' : l;
   document.getElementById('b-en').className = l==='en' ? 'on' : '';
   document.getElementById('b-ko').className = l==='ko' ? 'on' : '';
   document.getElementById('b-ja').className = l==='ja' ? 'on' : '';
-  var titles = {en: 'Privacy Policy - Quack Survivors', ko: '개인정보처리방침 - Quack Survivors', ja: 'プライバシーポリシー - Quack Survivors'};
+  document.getElementById('b-zh').className = l==='zh' ? 'on' : '';
+  var titles = {en: 'Privacy Policy - Quack Survivors', ko: '개인정보처리방침 - Quack Survivors', ja: 'プライバシーポリシー - Quack Survivors', zh: '隱私權政策 - Quack Survivors'};
   document.title = titles[l] || titles.en;
   try { localStorage.setItem('lang', l); } catch(e){}
 }
 (function(){
   var l = null;
   try { l = localStorage.getItem('lang'); } catch(e){}
-  if(l !== 'ko' && l !== 'en' && l !== 'ja') {
+  if(l !== 'ko' && l !== 'en' && l !== 'ja' && l !== 'zh') {
     var nl = (navigator.language||'').toLowerCase();
-    l = nl.indexOf('ko')===0 ? 'ko' : (nl.indexOf('ja')===0 ? 'ja' : 'en');
+    if(nl.indexOf('ko')===0) l = 'ko';
+    else if(nl.indexOf('ja')===0) l = 'ja';
+    else if(/^zh(-(tw|hk|mo)|.*hant)/.test(nl)) l = 'zh';
+    else l = 'en';
   }
   setLang(l);
 })();

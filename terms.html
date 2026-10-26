@@ -21,11 +21,14 @@
   .lang { position:absolute; top:16px; right:24px; display:flex; background:#fff; border-radius:999px; padding:4px; box-shadow:0 2px 8px rgba(120,80,20,.12); }
   .lang button { border:0; background:transparent; padding:6px 14px; border-radius:999px; font-weight:600; font-size:13px; font-family:inherit; cursor:pointer; color:#8a7355; }
   .lang button.on { background:#f08a1c; color:#fff; }
-  .ko, .ja { display: none; }
+  .ko, .ja, .zh { display: none; }
   html[lang="ko"] .ko { display: block; }
   html[lang="ko"] .en { display: none; }
   html[lang="ja"] .ja { display: block; }
   html[lang="ja"] .en { display: none; }
+  html[lang="zh-Hant"] .zh { display: block; }
+  html[lang="zh-Hant"] .en { display: none; }
+  html[lang="zh-Hant"] body { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", "Segoe UI", Roboto, sans-serif; }
   h1 {
     color: #ff9800;
     font-size: 2rem;
@@ -67,6 +70,7 @@
     <button id="b-en" onclick="setLang('en')">English</button>
     <button id="b-ko" onclick="setLang('ko')">한국어</button>
     <button id="b-ja" onclick="setLang('ja')">日本語</button>
+    <button id="b-zh" onclick="setLang('zh')">繁體中文</button>
   </div>
 
   <!-- ===================== ENGLISH ===================== -->
@@ -309,23 +313,107 @@
   </footer>
   </div>
 
+  <!-- ===================== 繁體中文 ===================== -->
+  <div class="zh">
+  <h1>服務條款</h1>
+  <p class="updated">最後更新日期：2026年7月19日</p>
+
+  <p>本服務條款（以下稱「本條款」）適用於您使用由 B7 Studio（以下稱「我們」）提供的行動應用程式「Quack Survivors」（以下稱「本應用程式」或「本遊戲」）。下載、安裝或使用本應用程式，即表示您同意受本條款拘束。如果您不同意，請勿使用本應用程式。</p>
+
+  <h2>1. 關於本服務</h2>
+  <p>Quack Survivors 是一款可透過 Google Play、Apple App Store 以及（適用時）其他應用程式發行平台（以下各稱「平台」）下載的行動遊戲。我們可能隨時更新、修改或終止本應用程式的功能，恕不另行通知。我們也可能隨時完全終止本應用程式。</p>
+  <p>我們不保證本應用程式適用於所有地區，或在所有地區皆可使用。</p>
+
+  <h2>2. 使用資格與帳號</h2>
+  <p>使用本應用程式不需要另外向我們建立帳號。如果您選擇使用 Google Play 遊戲服務（Android）或 Apple Game Center（iOS）登入，您的遊戲進度可能會連結到您的 Google 或 Apple 帳號，且僅用於雲端存檔以及跨裝置同步。我們不會自行蒐集或儲存您的 Google 或 Apple 帳號憑證。</p>
+  <p>對於遊戲進度或資料的任何遺失，包括儲存在您裝置上的資料，或透過 Google Play 遊戲、Apple Game Center 等第三方服務同步的資料，我們概不負責。</p>
+  <p>本應用程式並非以未滿 13 歲（或您所在司法管轄區相當的最低年齡）的兒童為對象。如果您尚未成年，請與父母或監護人一起閱讀本條款。</p>
+
+  <h2>3. 應用程式內購買與虛擬貨幣</h2>
+  <p>本應用程式可能提供應用程式內購買，包括名為「Cristal（水晶）」的虛擬貨幣，可用於解鎖或使用特定的遊戲內容與功能。</p>
+  <ul>
+    <li>Cristal 在本應用程式之外沒有任何金錢價值，且不得兌換、轉讓、出售或兌換為現實貨幣。</li>
+    <li>Cristal 及其他任何虛擬物品僅授權您於本應用程式內使用，其所有權始終歸 B7 Studio 所有。</li>
+    <li>所有購買均由平台（例如 Google Play 或 Apple App Store）處理。退款（如有）適用各平台自身的退款政策（透過 Apple App Store 購買的退款申請由 Apple 處理），B7 Studio 無法直接控制或保證退款結果。</li>
+    <li>我們保留隨時修改、暫停或終止任何虛擬貨幣或應用程式內購買功能的權利。</li>
+  </ul>
+
+  <h2>4. 禁止行為</h2>
+  <p>使用本應用程式時，您同意不得：</p>
+  <ul>
+    <li>使用作弊程式、漏洞利用、自動化軟體（機器人）、駭客手段、修改程式（mod）或任何未經授權的第三方軟體來修改或干擾本應用程式；</li>
+    <li>對本應用程式進行還原工程、反編譯或反組譯，但適用法律允許者除外；</li>
+    <li>將本應用程式用於任何非法目的，或以損害、干擾其他使用者或對其造成不良影響的方式使用；</li>
+    <li>試圖未經授權存取本應用程式、相關系統或網路的任何部分。</li>
+  </ul>
+
+  <h2>5. 智慧財產權</h2>
+  <p>本應用程式所包含的所有內容，包括但不限於角色、美術作品、標誌、音效、音樂及程式碼，均為 B7 Studio 或其授權人的財產，並受相關智慧財產權法律保護。除明確許可者外，您不得複製、修改、散布本應用程式，或據以創作衍生作品。</p>
+
+  <h2>6. 廣告</h2>
+  <p>本應用程式會顯示透過 Google AdMob 投放的廣告。廣告合作夥伴可能依其自身的隱私權政策蒐集與使用資料。詳情請參閱我們的<a href="/privacy.html">隱私權政策</a>。</p>
+  <p>在適用法律要求的情況下（包括歐洲經濟區、英國及瑞士），在顯示個人化廣告之前，會請您提供同意。您可以隨時透過應用程式內的「Ad Consent」設定撤回該同意。</p>
+
+  <h2>7. 免責聲明</h2>
+  <p>本應用程式依「現況」及「可提供」的狀態提供，不附帶任何明示或默示的保證。我們不保證本應用程式不會中斷、沒有錯誤，或不含有害成分。</p>
+
+  <h2>8. 責任限制</h2>
+  <p>在適用法律允許的最大範圍內，對於因您使用本應用程式而產生或與之相關的任何間接、附帶、特殊或衍生性損害，包括資料或虛擬物品的遺失，B7 Studio 概不負責。</p>
+
+  <h2>9. 終止</h2>
+  <p>如果您違反本條款或濫用本應用程式，或我們有合理理由，我們可能暫停或終止您對本應用程式的存取。</p>
+
+  <h2>10. 本條款的變更</h2>
+  <p>我們可能不定期更新本條款。重大變更可能會透過本應用程式或其他合理方式通知。變更生效後您繼續使用本應用程式，即視為接受修訂後的條款。</p>
+
+  <h2>11. 準據法</h2>
+  <p>本條款依加拿大不列顛哥倫比亞省法律解釋與適用，不適用其法律衝突原則；但若當地強制性的消費者保護法律另有規定，則從其規定。</p>
+
+  <h2>12. Apple App Store 使用者適用的附加條款</h2>
+  <p>如果您在 Apple 裝置上透過 Apple App Store 下載或使用本應用程式，則適用以下附加條款。如與本條款其他部分有所衝突，就此類使用而言，以本條為準。</p>
+  <ul>
+    <li><strong>確認事項。</strong>本條款僅由您與 B7 Studio 締結，Apple Inc.（以下稱「Apple」）並非當事人。本應用程式及其內容僅由 B7 Studio 負責，而非 Apple。</li>
+    <li><strong>授權範圍。</strong>授予您的授權，是依 Apple Media Services 條款與條件所載使用規則（Usage Rules）許可的範圍，在您擁有或控制的 Apple 品牌產品上使用本應用程式的有限、不可轉讓之授權。</li>
+    <li><strong>維護與支援。</strong>B7 Studio 單獨負責提供本應用程式的任何維護與支援服務。Apple 對於本應用程式不負有提供任何維護或支援服務的義務。</li>
+    <li><strong>保證。</strong>無論是明示或依法律默示的任何產品保證，均由 B7 Studio 單獨負責。如果本應用程式未能符合適用的保證，您可以通知 Apple，Apple 將退還本應用程式的購買價格（如有）。在適用法律允許的最大範圍內，Apple 對於本應用程式不負有任何其他保證義務。</li>
+    <li><strong>產品相關主張。</strong>您或任何第三方就本應用程式或您持有及使用本應用程式所提出的任何主張，包括產品責任主張、主張本應用程式不符合法律或法規要求，以及消費者保護或類似主張，均由 B7 Studio 而非 Apple 負責處理。</li>
+    <li><strong>智慧財產權主張。</strong>如果第三方主張本應用程式或您持有及使用本應用程式侵害其智慧財產權，則該主張的調查、抗辯、和解與解決均由 B7 Studio 而非 Apple 單獨負責。</li>
+    <li><strong>遵守法律。</strong>您聲明並保證：(i) 您不位於受美國政府禁運的國家，或被指定為「支持恐怖主義」的國家；(ii) 您未被列於任何美國政府的禁止或限制交易對象名單中。</li>
+    <li><strong>開發者聯絡方式。</strong>有關本應用程式的問題、投訴或主張，可寄至 <a href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a> 聯絡 B7 Studio。</li>
+    <li><strong>第三方條款。</strong>使用本應用程式時，您必須遵守任何適用的第三方協議條款（例如您的行動數據服務合約）。</li>
+    <li><strong>第三方受益人。</strong>Apple 及其子公司為本條及本條款的第三方受益人。經您接受後，Apple 將有權（且視為已接受該權利）以第三方受益人的身分對您執行本條款。</li>
+  </ul>
+
+  <h2>13. 聯絡我們</h2>
+  <p>如果您對本條款有任何問題，請聯絡我們：<br>
+  <a href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a></p>
+
+  <footer>
+    B7 Studio &middot; <a href="/">首頁</a> &middot; <a href="/privacy.html">隱私權政策</a>
+  </footer>
+  </div>
+
 </div>
 <script>
 function setLang(l){
-  document.documentElement.lang = l;
+  document.documentElement.lang = l==='zh' ? 'zh-Hant' : l;
   document.getElementById('b-en').className = l==='en' ? 'on' : '';
   document.getElementById('b-ko').className = l==='ko' ? 'on' : '';
   document.getElementById('b-ja').className = l==='ja' ? 'on' : '';
-  var titles = {en: 'Terms of Service - Quack Survivors', ko: '이용약관 - Quack Survivors', ja: '利用規約 - Quack Survivors'};
+  document.getElementById('b-zh').className = l==='zh' ? 'on' : '';
+  var titles = {en: 'Terms of Service - Quack Survivors', ko: '이용약관 - Quack Survivors', ja: '利用規約 - Quack Survivors', zh: '服務條款 - Quack Survivors'};
   document.title = titles[l] || titles.en;
   try { localStorage.setItem('lang', l); } catch(e){}
 }
 (function(){
   var l = null;
   try { l = localStorage.getItem('lang'); } catch(e){}
-  if(l !== 'ko' && l !== 'en' && l !== 'ja') {
+  if(l !== 'ko' && l !== 'en' && l !== 'ja' && l !== 'zh') {
     var nl = (navigator.language||'').toLowerCase();
-    l = nl.indexOf('ko')===0 ? 'ko' : (nl.indexOf('ja')===0 ? 'ja' : 'en');
+    if(nl.indexOf('ko')===0) l = 'ko';
+    else if(nl.indexOf('ja')===0) l = 'ja';
+    else if(/^zh(-(tw|hk|mo)|.*hant)/.test(nl)) l = 'zh';
+    else l = 'en';
   }
   setLang(l);
 })();
