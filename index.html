@@ -8,15 +8,15 @@
 <style>
   :root { --privacy-url: ""; }
   * { box-sizing: border-box; }
-  body { margin:0; background:#fff4de; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif; color:#4a3a28; }
+  body { margin:0; background:#fff4de; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Hiragino Sans","Yu Gothic","Noto Sans JP","PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif; color:#4a3a28; }
   .page { position:relative; min-height:100vh; min-height:100dvh; }
   .wrap { max-width:720px; min-height:100vh; min-height:100dvh; margin:0 auto; padding:56px 20px 14px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:clamp(8px,1.8vh,18px); }
   .lang { position:absolute; top:12px; right:16px; display:flex; background:#fff; border-radius:999px; padding:3px; box-shadow:0 2px 8px rgba(120,80,20,.12); z-index:2; }
-  .lang button { border:0; background:transparent; padding:6px 14px; border-radius:999px; font:600 13px inherit; font-family:inherit; cursor:pointer; color:#8a7355; }
+  .lang button { border:0; background:transparent; padding:6px 12px; border-radius:999px; font:600 13px inherit; font-family:inherit; cursor:pointer; color:#8a7355; }
   .lang button.on { background:#f08a1c; color:#fff; }
-  .ko { display:none; }
-  html[lang="ko"] .ko { display:block; }
-  html[lang="ko"] .en { display:none; }
+  .ko, .ja, .zh { display:none; }
+  html[lang="ko"] .ko, html[lang="ja"] .ja, html[lang="zh-Hant"] .zh { display:block; }
+  html[lang="ko"] .en, html[lang="ja"] .en, html[lang="zh-Hant"] .en { display:none; }
   .hero { height:clamp(150px,36vh,400px); width:auto; max-width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:24px; box-shadow:0 8px 28px rgba(120,80,20,.22); margin:0 auto; display:block; flex:0 1 auto; min-height:0; }
   .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
   .tag { font-size:clamp(14px,2.2vh,18px); line-height:1.5; margin:0; }
@@ -38,6 +38,8 @@
   <div class="lang">
     <button id="b-en" class="on" onclick="setLang('en')">English</button>
     <button id="b-ko" onclick="setLang('ko')">한국어</button>
+    <button id="b-ja" onclick="setLang('ja')">日本語</button>
+    <button id="b-zh" onclick="setLang('zh')">繁體中文</button>
   </div>
   <div class="wrap">
     <img class="hero" src="hero.jpg" alt="Quack Survivors">
@@ -45,11 +47,15 @@
 
     <p class="tag en">From fleeing ducks to legendary explorers!<br>Wipe out waves of slimes with your adorable yet powerful duck squad.</p>
     <p class="tag ko">도망만 치던 오리가... 전설의 탐험대가 된다!<br>귀엽지만 강력한 오리들과 함께 슬라임을 쓸어버리세요.</p>
+    <p class="tag ja">逃げてばかりだったアヒルが…伝説の探検隊に！<br>かわいくて強いアヒルの仲間たちと一緒に、スライムをやっつけよう。</p>
+    <p class="tag zh">只會逃跑的鴨子……變成傳奇探險隊！<br>和可愛又強大的鴨子們一起，把史萊姆一掃而空吧。</p>
 
     <div class="badges">
       <a class="badge gp" href="https://play.google.com/store/apps/details?id=com.b7studio.quacksurvivors" target="_blank" rel="noopener">Get it on Google Play</a>
       <div class="badge as en">Coming soon on the App Store</div>
       <div class="badge as ko">App Store 출시 예정</div>
+      <div class="badge as ja">App Store 近日公開</div>
+      <div class="badge as zh">App Store 即將上架</div>
     </div>
 
     <div class="cards">
@@ -64,6 +70,17 @@
       <p><a class="mail" href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a></p>
     </div>
 
+    <div class="card ja">
+      <h2>お問い合わせ</h2>
+      <p>ご質問、不具合の報告、ご意見は下記のメールアドレスまでお送りください。</p>
+      <p><a class="mail" href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a></p>
+    </div>
+    <div class="card zh">
+      <h2>客服支援</h2>
+      <p>有任何問題、錯誤回報或意見，請寄信至下方信箱。</p>
+      <p><a class="mail" href="mailto:quacksurvivors.support@gmail.com">quacksurvivors.support@gmail.com</a></p>
+    </div>
+
     <div class="card en">
       <h2>Legal</h2>
       <p><a class="privacy" href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms of Service</a></p>
@@ -72,6 +89,14 @@
       <h2>약관 및 정책</h2>
       <p><a class="privacy" href="/privacy.html">개인정보처리방침</a> &nbsp;·&nbsp; <a href="/terms.html">이용약관</a></p>
     </div>
+    <div class="card ja">
+      <h2>規約とポリシー</h2>
+      <p><a class="privacy" href="/privacy.html">プライバシーポリシー</a> &nbsp;·&nbsp; <a href="/terms.html">利用規約</a></p>
+    </div>
+    <div class="card zh">
+      <h2>條款與政策</h2>
+      <p><a class="privacy" href="/privacy.html">隱私權政策</a> &nbsp;·&nbsp; <a href="/terms.html">服務條款</a></p>
+    </div>
     </div>
 
     <footer>Quack Survivors · © 2026 B7 Studio</footer>
@@ -79,15 +104,25 @@
 </div>
 <script>
 function setLang(l){
-  document.documentElement.lang = l;
-  document.getElementById('b-en').className = l==='en' ? 'on' : '';
-  document.getElementById('b-ko').className = l==='ko' ? 'on' : '';
+  document.documentElement.lang = l==='zh' ? 'zh-Hant' : l;
+  ['en','ko','ja','zh'].forEach(function(x){ document.getElementById('b-'+x).className = l===x ? 'on' : ''; });
+  var d = {en:'Quack Survivors: collect, merge and evolve your duck squad and wipe out waves of slimes.',
+           ko:'Quack Survivors: 오리 군단을 모으고 합성하고 진화시켜 슬라임 무리를 쓸어버리세요.',
+           ja:'Quack Survivors: アヒル軍団を集めて、合成して、進化させて、スライムの大群をやっつけよう。',
+           zh:'Quack Survivors：收集、合成並進化你的鴨子軍團，把成群的史萊姆一掃而空。'};
+  var m = document.querySelector('meta[name="description"]'); if(m) m.setAttribute('content', d[l]);
   try { localStorage.setItem('lang', l); } catch(e){}
 }
 (function(){
   var l = null;
   try { l = localStorage.getItem('lang'); } catch(e){}
-  if(!l) l = (navigator.language||'').toLowerCase().indexOf('ko')===0 ? 'ko' : 'en';
+  if(l !== 'ko' && l !== 'en' && l !== 'ja' && l !== 'zh') {
+    var nl = (navigator.language||'').toLowerCase();
+    if(nl.indexOf('ko')===0) l = 'ko';
+    else if(nl.indexOf('ja')===0) l = 'ja';
+    else if(/^zh(-(tw|hk|mo)|.*hant)/.test(nl)) l = 'zh';
+    else l = 'en';
+  }
   setLang(l);
 })();
 </script>
